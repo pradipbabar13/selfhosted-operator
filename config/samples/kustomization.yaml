@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- selfhosted.dev_v1_selfhostedstage.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

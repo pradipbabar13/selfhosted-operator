@@ -1,0 +1,12 @@
+apiVersion: selfhosted.dev.my.domain/v1
+kind: Selfhostedstage
+metadata:
+  labels:
+    app.kubernetes.io/name: selfhostedstage
+    app.kubernetes.io/instance: selfhostedstage-sample
+    app.kubernetes.io/part-of: outsystems-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: outsystems-operator
+  name: selfhostedstage-sample
+spec:
+  environment : test-dev
