@@ -1,0 +1,52 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: outsystems-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Selfhostedstage is the Schema for the selfhostedstages API
+      displayName: Selfhostedstage
+      kind: Selfhostedstage
+      name: selfhostedstages.selfhosted.dev.outsystems
+      version: v1
+    - description: Selfhostedstage is the Schema for the selfhostedstages API
+      displayName: Selfhostedstage
+      kind: Selfhostedstage
+      name: selfhostedstages.selfhosted.dev.my.domain
+      version: v1
+  description: selfhosted operator dev
+  displayName: selfhosted
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - selfhosted
+  links:
+  - name: Outsystems Operator
+    url: https://outsystems-operator.domain
+  maintainers:
+  - email: pradip.babar@outsystems.com
+    name: pradip
+  maturity: alpha
+  provider:
+    name: outsystems
+  version: 0.0.0

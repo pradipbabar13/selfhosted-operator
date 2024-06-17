@@ -1,0 +1,56 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.13.0
+  creationTimestamp: null
+  name: selfhostedstages.selfhosted.dev.my.domain
+spec:
+  group: selfhosted.dev.my.domain
+  names:
+    kind: Selfhostedstage
+    listKind: SelfhostedstageList
+    plural: selfhostedstages
+    singular: selfhostedstage
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        description: Selfhostedstage is the Schema for the selfhostedstages API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: SelfhostedstageSpec defines the desired state of Selfhostedstage
+            properties:
+              environment:
+                description: environment is an example field of Selfhostedstage.
+                type: string
+            required:
+            - environment
+            type: object
+          status:
+            description: SelfhostedstageStatus defines the observed state of Selfhostedstage
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: null
+  storedVersions: null
