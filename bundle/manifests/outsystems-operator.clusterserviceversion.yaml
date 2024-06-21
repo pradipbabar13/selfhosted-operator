@@ -23,7 +23,7 @@ metadata:
         }
       ]
     capabilities: Basic Install
-    createdAt: "2024-06-17T10:07:46Z"
+    createdAt: "2024-06-18T07:05:54Z"
     operators.operatorframework.io/builder: operator-sdk-v1.34.2
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
   name: outsystems-operator.v0.0.1
@@ -46,6 +46,18 @@ spec:
     spec:
       clusterPermissions:
       - rules:
+        - apiGroups:
+          - ""
+          resources:
+          - namespaces
+          verbs:
+          - create
+          - delete
+          - get
+          - list
+          - patch
+          - update
+          - watch
         - apiGroups:
           - selfhosted.dev.my.domain
           resources:
@@ -138,7 +150,7 @@ spec:
                 - --leader-elect
                 command:
                 - /manager
-                image: public.ecr.aws/w0o4m8y0/selfhosted-os-operator:1.0.0
+                image: public.ecr.aws/w0o4m8y0/selfhosted-os-operator:1.0.1
                 livenessProbe:
                   httpGet:
                     path: /healthz

@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: public.ecr.aws/w0o4m8y0/selfhosted-os-operator
-  newTag: 1.0.0
+  newTag: 1.0.1
